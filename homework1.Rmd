@@ -1,0 +1,75 @@
+---
+title: "Math-420: Homework 1"
+author: "Kashav Piya"
+date: "2/8/2022"
+output: 
+  html_document: 
+    toc: true
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Basic Calculations
+
+### Question 2
+
+Value of $e^2$:
+
+```{r, question1, echo = T}
+  x = exp(2)
+  x
+```
+
+### Question 3
+
+Natural *log* of 0:
+
+```{r, question2a, echo = T}
+  x = log(0)
+  x
+```
+
+Natural *log* of 10:
+
+```{r, question2b, echo = T}
+  x = log(10)
+  x
+```
+
+### Question 4
+
+Mean of y:
+
+```{r, question3, echo = TRUE}
+  y = c(0, 2, NA, 3, 4, 1, 9, 0)
+  y
+  ans = mean(y, na.rm=TRUE)
+  ans
+```
+
+### Question 5
+
+- *n* in this case is 100 which is the upper bound
+
+- Value of the expression:
+
+```{r, question4, echo=TRUE}
+  for(i in 1:100){
+    ans = ans + (log(i))
+  }
+  ans
+
+```
+
+### Question 6
+
+Number of elements of `some_vector` greater than $1$:
+
+```{r, question5, echo=TRUE}
+  set.seed(42)
+  some_vector = rnorm(100)
+  some_vector
+  length(some_vector[some_vector>1])
